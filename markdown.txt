@@ -1,0 +1,76 @@
+# 📊 Student Dashboard & WhatsApp Automation
+
+## 🚀 Project Overview
+
+This project generates **student performance dashboards** and sends them to parents via **WhatsApp automatically**.
+
+It combines data processing, visualization, cloud storage, and messaging into one pipeline.
+
+---
+
+## ⚙️ Tech Stack
+
+* Python
+* Pandas
+* Matplotlib
+* AWS S3
+* Twilio WhatsApp API
+
+---
+
+## 🔥 Features
+
+* Generate dashboards for each student
+* Compare student marks with class average
+* Upload dashboards to S3
+* Send dashboards via WhatsApp
+* Supports multiple images (attendance + performance)
+
+---
+
+## 🏗️ Workflow
+
+```text
+Excel Data → Python → Dashboards
+          ↓
+        Upload to S3
+          ↓
+     Generate URLs
+          ↓
+Send via Twilio WhatsApp API
+```
+
+---
+
+## 📂 Files
+
+* `attendance_report.xlsx` → Input data
+* `dashboards/` → Generated images
+* `metadata.csv` → Mapping (name, phone, URLs)
+* `main.py` → Dashboard + upload
+* `send_whatsapp.py` → Send messages
+
+---
+
+## ⚡ How to Run
+
+```bash
+pip install pandas matplotlib boto3 requests
+python main.py
+python send_whatsapp.py
+```
+
+---
+
+## ⚠️ Notes
+
+* Twilio Sandbox requires users to join first
+* S3 images must be publicly accessible
+* URLs should open in browser
+
+---
+
+## 👨‍💻 Author
+
+Deepak Jhinjha
+
